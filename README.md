@@ -51,6 +51,54 @@ Arguments Setting
   </tr>
 </table>
 
+### Result
+- If nothing is set
+<table style="width:100%">
+  <tr>
+	<th>Arguments Setting</th> 
+	<th>Viewing</th> 
+  </tr>
+  <tr>
+  	<td><img width="350" height="120" src="/Image/ArgumentsCaseSetting01.png"></img></td>
+    <td><img width="250" height="500" src="/Image/ArgumentsCase01.png"></img></td>
+  </tr>
+</table>
+
+- First set test
+<table style="width:100%">
+  <tr>
+	<th>Arguments Setting</th> 
+	<th>Viewing</th> 
+  </tr>
+  <tr>
+  	<td><img width="350" height="120" src="/Image/ArgumentsCaseSetting02.png"></img></td>
+    <td><img width="250" height="500" src="/Image/ArgumentsCase02.png"></img></td>
+  </tr>
+</table>
+
+- second set test
+<table style="width:100%">
+  <tr>
+	<th>Arguments Setting</th> 
+	<th>Viewing</th> 
+  </tr>
+  <tr>
+  	<td><img width="350" height="120" src="/Image/ArgumentsCaseSetting03.png"></img></td>
+    <td><img width="250" height="500" src="/Image/ArgumentsCase03.png"></img></td>
+  </tr>
+</table>
+
+- last set test
+<table style="width:100%">
+  <tr>
+	<th>Arguments Setting</th> 
+	<th>Viewing</th> 
+  </tr>
+  <tr>
+  	<td><img width="350" height="120" src="/Image/ArgumentsCaseSetting04.png"></img></td>
+    <td><img width="250" height="500" src="/Image/ArgumentsCase04.png"></img></td>
+  </tr>
+</table>
 
 ## Samples Case 02
 > Log
