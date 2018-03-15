@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  JWSProcessInfoSample
 //
-//  Created by Jang Wangsu on 2018. 3. 15..
+//  Created by Clint on 2018. 3. 15..
 //  Copyright © 2018년 clint. All rights reserved.
 //
 
