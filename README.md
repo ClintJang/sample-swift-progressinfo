@@ -11,11 +11,48 @@ Let's take a look at the processInfo of swift. This is a sample source and descr
 # Samples 
 > Using the method of sending Arguments when running the app, try to test how to build the conditions in the build test, and check how to output the keys.
 
-## Test Case 01
+## Samples Case 01
 > Use "Arguments Passed On Launch"
 
+sources
+- ViewController.swift
+<pre>
+    @IBOutlet weak var testLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // TEST Case 1
+        if ProcessInfo.processInfo.arguments.contains("TEST_SELF_VIEW_BACKGROUND_COLOR") {
+            self.view.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+        }
+        
+        // TEST Case 2
+        if ProcessInfo.processInfo.arguments.contains("TEST_SELF_LABEL_TEXT") {
+            testLabel.text = "TEST"
+        }
+        
+        // View key and value log
+        for (key, value) in ProcessInfo.processInfo.environment {
+            print(">>>> \(key): \(value)")
+        }
+    }
+</pre>
 
-## Test Case 02
+Arguments Setting
+<table style="width:100%">
+  <tr>
+	<th>Setting (1/2)</th> 
+	<th>Setting (2/2)</th> 
+  </tr>
+  <tr>
+  	<td><img width="295" height="138" src="/Image/ArgumentsSetting01.png"></img></td>
+    <td><img width="582" height="239" src="/Image/ArgumentsSetting02.png"></img></td>
+  </tr>
+</table>
+
+
+## Samples Case 02
 > Log
 
 
