@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     func useArgumentsPassedOnLaunch() {
         // TEST Setting 1
+        
         if ProcessInfo.processInfo.arguments.contains("TEST_SELF_VIEW_BACKGROUND_COLOR") {
             self.view.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
         }

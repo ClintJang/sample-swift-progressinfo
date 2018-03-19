@@ -49,6 +49,7 @@ sources
 
 ## Samples Case 01
 > Use "Arguments Passed On Launch"
+>> It seems to be a convenient way to actually use it. By modifying the checks of the Arguments of the schema without modifying the code, you can see the changes and options given in the development.
 
 Arguments Setting
 <table style="width:100%">
