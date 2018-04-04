@@ -10,6 +10,7 @@ Let's take a look at the processInfo of swift. This is a sample source and descr
 
 # Samples 
 > Using the method of sending Arguments when running the app, try to test how to build the conditions in the build test, and check how to output the keys.
+>> It can be set in run, so it does not apply to archive. So it is useful for testing.
 
 sources
 - ViewController.swift
