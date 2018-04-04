@@ -1,18 +1,22 @@
 # Apple's ProcessInfo Class
 [![License](http://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://github.com/clintjang/sample-swift-progressinfo/blob/master/LICENSE) [![Swift 4](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](https://swift.org) 
-- [ProcessInfo](https://developer.apple.com/documentation/foundation/processinfo) : The process information agent can return information such as arguments, environment variables, host name, and process name. The processInfo class method returns the shared agent for the current process—that is, the process whose object sent the message. For example, the following line returns the NSProcessInfo object, which then provides the name of the current process
-- (ProcessInfo는 인수, 환경 변수, 호스트 이름 및 프로세스 이름과 같은 정보를 리턴 할 수 있습니다. 활용 요소가 많습니다. 활용한다면?)
+- [ProcessInfo](https://developer.apple.com/documentation/foundation/processinfo) : 프로세스 정보 에이전트는 인수, 환경 변수, 호스트 이름 및 프로세스 이름과 같은 정보를 리턴 할 수 있습니다. processInfo 클래스 메소드는 현재 프로세스 (즉, 객체가 메시지를 보낸 프로세스)에 대한 공유 에이전트를 반환합니다.
+- 활용 요소가 많습니다. 활용한다면?
 - iOS 2.0+
 
 # Information
-Let's take a look at the processInfo of swift. This is a sample source and description.
+swift의 processInfo에 대해 알아보겠습니다. 테스트 해본 셈플과 설명입니다.
 
 
 # Samples 
-> Using the method of sending Arguments when running the app, try to test how to build the conditions in the build test, and check how to output the keys.
->> It can be set in run, so it does not apply to archive. So it is useful for testing.
+> 개발 중 빌드를 많이 합니다. 그때마다 내가 원하는 속성의 분기 처리를 코드 레벨에서 변경하는 것도 좋은 방법이지만 아래 셈플 01과 같은 방법이 있습니다. 
 
-sources
+> 오브젝티드 씨에서는 전처리문(컴파일 이전에 미리 처리될 수 있는..)이 있어서 Test URL 분기라던가, 테스트 시에만 보이게 하고 싶은 설정들의 분기가 잘 이용만 하면 편리했는 데, Swift는 그런 부분이 조금 아쉬웠습니다... 
+> (active compilation flag.. 등등 기타 유용한 다른 방법도 많이 있습니다.)
+>> 셈플 01은 배포(아카이브) 시에는 적용이 안되니 주의하세요~. 테스트에 무척 유용합니다.
+>> 셈플 02는 어떤 키와 값들이 있는 지 로그를 찍고 결과 정보를 확인해 보았습니다.
+
+소스
 - ViewController.swift
 <pre>
     @IBOutlet weak var testLabel: UILabel!
@@ -48,16 +52,16 @@ sources
     }
 </pre>
 
-## Samples Case 01
-> Use "Arguments Passed On Launch"
->> 1. It seems to be a convenient way to actually use it. By modifying the checks of the Arguments of the schema without modifying the code, you can see the changes and options given in the development.
->> 2. It is better to use it with the "active compilation flag".
+## 셈플 01 : Run 빌드시 Arguments를 이용하는 방법
+> "Arguments Passed On Launch" 사용해 봅시다.
+>> 1. 개발 빌드 전, 원하는 옵션을 체크하고 빌드를 하면 손쉽게 옵션을 적용해서 빌드할 수 있습니다. 
+>> 2. 아래는 그 방법이 설명되어있습니다. 
 
-Arguments Setting
+Arguments 설정은 어떻게?
 <table style="width:100%">
   <tr>
-	<th>Setting (1/2)</th> 
-	<th>Setting (2/2)</th> 
+	<th>설정 순서 1번째 (1/2)</th> 
+	<th>설정 순서 2번째 (2/2)<br>여기서 Arguments를 추가하고 체크하세요.</th> 
   </tr>
   <tr>
   	<td><img width="295" height="138" src="/Image/ArgumentsSetting01.png"></img></td>
@@ -65,12 +69,15 @@ Arguments Setting
   </tr>
 </table>
 
-### Result
-- If nothing is set
+### 결과 : 셈플 소스의 결과입니다. 
+> 셈플소스를 다운받아 실행해서 체크를 바꿔보며 확인해 보세요~
+
+- 모든 체크를 하지 않은 경우
+> 변경된 것이 없습니다.
 <table style="width:100%">
   <tr>
-	<th>Arguments Setting</th> 
-	<th>Viewing</th> 
+	<th>Arguments 설정</th> 
+	<th>실행 화면</th> 
   </tr>
   <tr>
   	<td><img width="350" height="120" src="/Image/ArgumentsCaseSetting01.png"></img></td>
@@ -78,11 +85,12 @@ Arguments Setting
   </tr>
 </table>
 
-- First set test
+- 첫번째 옵션 체크한 경우
+> 글자만 테스트로 변경되었네요~ 
 <table style="width:100%">
   <tr>
-	<th>Arguments Setting</th> 
-	<th>Viewing</th> 
+	<th>Arguments 설정</th> 
+	<th>실행 화면</th> 
   </tr>
   <tr>
   	<td><img width="350" height="120" src="/Image/ArgumentsCaseSetting02.png"></img></td>
@@ -90,11 +98,12 @@ Arguments Setting
   </tr>
 </table>
 
-- second set test
+- 두번째 옵션 체크한 경우
+> 배경만 바뀌었네요.
 <table style="width:100%">
   <tr>
-	<th>Arguments Setting</th> 
-	<th>Viewing</th> 
+	<th>Arguments 설정</th> 
+	<th>실행 화면</th> 
   </tr>
   <tr>
   	<td><img width="350" height="120" src="/Image/ArgumentsCaseSetting03.png"></img></td>
@@ -102,11 +111,13 @@ Arguments Setting
   </tr>
 </table>
 
-- last set test
+- 모두 체크한 경우
+> 배경과 글자가 모두 바뀌었습니다. 
+
 <table style="width:100%">
   <tr>
-	<th>Arguments Setting</th> 
-	<th>Viewing</th> 
+	<th>Arguments 설정</th> 
+	<th>실행 화면</th> 
   </tr>
   <tr>
   	<td><img width="350" height="120" src="/Image/ArgumentsCaseSetting04.png"></img></td>
@@ -114,9 +125,9 @@ Arguments Setting
   </tr>
 </table>
 
-## Samples Case 02
-> Let's see what information is output by key and value.
-- run function
+## 셈플 02 : ProcessInfo에서 이용할 수 있는 키와 값을 보고 싶었어요~
+> 어떤 정보들을 확인 할 수 있는 지 로그를 찍어보았습니다. 
+- 로그 실행 함수는 아래와 같습니다.
 <pre>
     func printProcessInfoEnvironmentKeyAndValue() {
         // View key and value log
@@ -126,7 +137,7 @@ Arguments Setting
     }
 </pre>
 
-- print result (in simulator:iPhone 8 Plus)
+- 결과 출력 : iPhone 8 Plus 시뮬레이터에서 실행했습니다.
 <pre>
 >>>> __XPC_DYLD_FRAMEWORK_PATH: /Users/clintjang/Library/Developer/Xcode/DerivedData/JWSProcessInfoSample-evdzffmjhsdbdkdsqjhqkkphmnjc/Build/Products/Debug-iphonesimulator
 >>>> DYLD_ROOT_PATH: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot
