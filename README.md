@@ -1,7 +1,8 @@
 # Apple's ProcessInfo Class
 [![License](http://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://github.com/clintjang/sample-swift-progressinfo/blob/master/LICENSE) [![Swift 4](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](https://swift.org) 
 - [ProcessInfo](https://developer.apple.com/documentation/foundation/processinfo) : The process information agent can return information such as arguments, environment variables, host name, and process name. The processInfo class method returns the shared agent for the current process—that is, the process whose object sent the message. For example, the following line returns the NSProcessInfo object, which then provides the name of the current process
-- (ProcessInfo는 인수, 환경 변수, 호스트 이름 및 프로세스 이름과 같은 정보를 리턴 할 수 있습니다. 활용 요소가 많습니다. 활용한다면?)
+- How can you use it?
+- [Korean Description](https://github.com/ClintJang/sample-swift-progressinfo/blob/master/READMEKO.md) : Korean Description Link
 - iOS 2.0+
 
 # Information
