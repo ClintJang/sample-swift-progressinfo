@@ -15,7 +15,7 @@ Let's take a look at the processInfo of swift. This is a sample source and descr
 
 sources
 - ViewController.swift
-<pre>
+```swift
     @IBOutlet weak var testLabel: UILabel!
     
     override func viewDidLoad() {
@@ -47,7 +47,7 @@ sources
             print(">>>> \(key): \(value)")
         }
     }
-</pre>
+```
 
 ## Samples Case 01
 > Use "Arguments Passed On Launch"
@@ -118,17 +118,17 @@ Arguments Setting
 ## Samples Case 02
 > Let's see what information is output by key and value.
 - run function
-<pre>
+```swift
     func printProcessInfoEnvironmentKeyAndValue() {
         // View key and value log
         for (key, value) in ProcessInfo.processInfo.environment {
             print(">>>> \(key): \(value)")
         }
     }
-</pre>
+```
 
 - print result (in simulator:iPhone 8 Plus)
-<pre>
+```
 >>>> __XPC_DYLD_FRAMEWORK_PATH: /Users/clintjang/Library/Developer/Xcode/DerivedData/JWSProcessInfoSample-evdzffmjhsdbdkdsqjhqkkphmnjc/Build/Products/Debug-iphonesimulator
 >>>> DYLD_ROOT_PATH: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot
 >>>> SIMULATOR_AUDIO_DEVICES_PLIST_PATH: /Users/clintjang/Library/Developer/CoreSimulator/Devices/6A2A94FC-74F0-47AC-847A-5F583E63430D/data/var/run/com.apple.coresimulator.audio.plist
@@ -177,4 +177,4 @@ Arguments Setting
 >>>> SIMULATOR_ROOT: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot
 >>>> CFFIXED_USER_HOME: /Users/clintjang/Library/Developer/CoreSimulator/Devices/6A2A94FC-74F0-47AC-847A-5F583E63430D/data/Containers/Data/Application/132D6DCC-2A9F-4EC4-AD68-354B521C2207
 
-</pre>
+```
