@@ -18,7 +18,7 @@ swift의 processInfo에 대해 알아보겠습니다. 테스트 해본 셈플과
 
 소스
 - ViewController.swift
-<pre>
+```swift
     @IBOutlet weak var testLabel: UILabel!
     
     override func viewDidLoad() {
@@ -50,7 +50,7 @@ swift의 processInfo에 대해 알아보겠습니다. 테스트 해본 셈플과
             print(">>>> \(key): \(value)")
         }
     }
-</pre>
+```
 
 ## 셈플 01 : Run 빌드시 Arguments를 이용하는 방법
 > "Arguments Passed On Launch" 사용해 봅시다.
@@ -128,17 +128,17 @@ Arguments 설정은 어떻게?
 ## 셈플 02 : ProcessInfo에서 이용할 수 있는 키와 값을 보고 싶었어요~
 > 어떤 정보들을 확인 할 수 있는 지 로그를 찍어보았습니다. 
 - 로그 실행 함수는 아래와 같습니다.
-<pre>
+```swift
     func printProcessInfoEnvironmentKeyAndValue() {
         // View key and value log
         for (key, value) in ProcessInfo.processInfo.environment {
             print(">>>> \(key): \(value)")
         }
     }
-</pre>
+```
 
 - 결과 출력 : iPhone 8 Plus 시뮬레이터에서 실행했습니다.
-<pre>
+```
 >>>> __XPC_DYLD_FRAMEWORK_PATH: /Users/clintjang/Library/Developer/Xcode/DerivedData/JWSProcessInfoSample-evdzffmjhsdbdkdsqjhqkkphmnjc/Build/Products/Debug-iphonesimulator
 >>>> DYLD_ROOT_PATH: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot
 >>>> SIMULATOR_AUDIO_DEVICES_PLIST_PATH: /Users/clintjang/Library/Developer/CoreSimulator/Devices/6A2A94FC-74F0-47AC-847A-5F583E63430D/data/var/run/com.apple.coresimulator.audio.plist
@@ -187,4 +187,4 @@ Arguments 설정은 어떻게?
 >>>> SIMULATOR_ROOT: /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot
 >>>> CFFIXED_USER_HOME: /Users/clintjang/Library/Developer/CoreSimulator/Devices/6A2A94FC-74F0-47AC-847A-5F583E63430D/data/Containers/Data/Application/132D6DCC-2A9F-4EC4-AD68-354B521C2207
 
-</pre>
+```
